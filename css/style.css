@@ -1,0 +1,853 @@
+/* Global Styles */
+:root {
+    --primary-color: #8B0000;  /* Dark red color for main navigation */
+    --secondary-color: #f8f9fa;
+    --text-color: #333;
+    --link-color: #8B0000;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+}
+
+/* Top Navigation */
+.top-nav {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0;
+}
+
+.top-links {
+    font-size: 12px;
+}
+
+.top-links a {
+    color: #333;
+    text-decoration: none;
+    padding: 0 5px;
+}
+
+.top-links a:hover {
+    color: var(--primary-color);
+}
+
+.separator {
+    color: #999;
+    margin: 0 2px;
+}
+
+/* Header Section */
+.site-header {
+    padding: 20px 0;
+    background-color: #fff;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.khmer-title {
+    font-family: "Khmer OS Muol Light", "Khmer OS", Arial, sans-serif;
+    font-size: 28px;
+    color: #333;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.english-title {
+    font-size: 20px;
+    color: #333;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.motto {
+    color: #666;
+    font-style: italic;
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Main Navigation */
+.main-nav {
+    background-color: var(--primary-color);
+    padding: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.faculty-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.faculty-item {
+    color: #fff;
+    text-decoration: none;
+    font-size: 11px;
+    padding: 10px 8px;
+    text-align: center;
+    flex: 1;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    transition: background-color 0.3s;
+}
+
+.faculty-item:last-child {
+    border-right: none;
+}
+
+.faculty-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .faculty-item {
+        flex: 0 0 33.333%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+@media (max-width: 768px) {
+    .khmer-title {
+        font-size: 24px;
+    }
+    
+    .english-title {
+        font-size: 18px;
+    }
+    
+    .faculty-item {
+        flex: 0 0 50%;
+    }
+    
+    .logo {
+        width: 80px;
+    }
+}
+
+@media (max-width: 576px) {
+    .faculty-item {
+        flex: 0 0 100%;
+    }
+    
+    .top-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .top-links a {
+        margin: 2px 0;
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--secondary-color);
+    padding: 2rem 0;
+    position: relative;
+}
+
+.hero-section h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Main Content */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 0;
+    margin-bottom: 1.5rem;
+}
+
+.card:hover {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transform: none;
+}
+
+.card-title {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    border-top: 2px solid var(--primary-color);
+    margin-top: 30px;
+}
+
+/* Find RUPP Section */
+.find-rupp h5 {
+    color: #333;
+    font-size: 14px;
+    margin: 0;
+    padding: 8px 0;
+}
+
+/* Subscribe Section */
+.subscribe-section {
+    text-align: center;
+}
+
+.subscribe-section h5 {
+    color: #333;
+    font-size: 14px;
+    margin: 0;
+}
+
+.subscribe-section p {
+    color: #666;
+    font-size: 12px;
+    margin: 5px 0 10px;
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.subscribe-form input {
+    max-width: 200px;
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+}
+
+.btn-subscribe {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    font-size: 12px;
+    cursor: pointer;
+    height: 30px;
+    line-height: 20px;
+}
+
+.btn-subscribe:hover {
+    background-color: #a00000;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    padding: 8px 0;
+}
+
+.social-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.social-link:hover {
+    text-decoration: underline;
+}
+
+/* Copyright Section */
+.copyright-section {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.copyright-section p {
+    color: #666;
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.it-center-link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.it-center-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .subscribe-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subscribe-form input {
+        max-width: 100%;
+    }
+
+    .social-links {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .find-rupp {
+        text-align: center;
+    }
+}
+
+/* Card Styles */
+.card-header {
+    background-color: var(--primary-color);
+    border-bottom: none;
+    padding: 8px 15px;
+}
+
+.card-header h5 {
+    color: white;
+    font-size: 14px;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 15px;
+    background-color: #f8f9fa;
+}
+
+/* News and Announcements */
+.announcement a,
+.news-item a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.announcement a:hover,
+.news-item a:hover {
+    color: var(--primary-color);
+}
+
+.more-link {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.more-link:hover {
+    text-decoration: underline;
+}
+
+/* Section Headers */
+.section-header {
+    background-color: #8B0000;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+/* Overview Section */
+.overview-section {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    padding: 30px 15px;
+}
+
+.overview-stats {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.stat-item {
+    flex: 0 0 calc(20% - 16px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.overview-icon {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 10px;
+}
+
+.stat-text {
+    font-size: 13px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.stat-value {
+    color: #8B0000;
+    font-weight: bold;
+}
+
+/* Philosophy Section */
+.philosophy-text,
+.attributes-text {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.philosophy-text strong,
+.attributes-text strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.philosophy-text p,
+.attributes-text p {
+    margin-bottom: 12px;
+}
+
+.content-box {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.content-box ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.content-box ul li {
+    font-size: 13px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .stat-item {
+        flex: 0 0 calc(33.333% - 16px);
+    }
+}
+
+@media (max-width: 768px) {
+    .stat-item {
+        flex: 0 0 calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    
+    .overview-stats {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .stat-item {
+        flex: 0 0 100%;
+    }
+    
+    .overview-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Khmer Text */
+.khmer-text {
+    font-family: "Khmer OS", "Khmer OS System", Arial, sans-serif;
+}
+
+/* News Image */
+.news-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.text-muted {
+    font-size: 0.8rem;
+}
+
+/* List Styles */
+.list-unstyled li {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.list-unstyled li:last-child {
+    border-bottom: none;
+} 
+
+/* Section Titles */
+.section-title {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* Notice Board */
+.notice-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notice-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.notice-list li:last-child {
+    border-bottom: none;
+}
+
+.notice-list a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.notice-list a:hover {
+    color: var(--primary-color);
+}
+
+.detail-link {
+    color: var(--primary-color);
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* Hotspot Box */
+.hotspot-box {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    font-size: 13px;
+}
+
+.register-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
+
+/* Carousel Styles */
+.carousel {
+    margin-bottom: 2rem;
+}
+
+.carousel-item {
+    height: 400px;
+    background-color: #000;
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+}
+
+.carousel-caption h5 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.carousel-indicators {
+    margin-bottom: 0;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+/* Responsive Carousel */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 300px;
+    }
+    
+    .carousel-caption h5 {
+        font-size: 1rem;
+    }
+}
+
+/* Dots Navigation */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.carousel-dot.active {
+    background-color: #fff;
+}
+
+/* Announcement Section */
+.announcement {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.announcement img {
+    margin-right: 15px;
+    border: none;
+}
+
+.announcement-text {
+    text-align: left;
+    font-size: 14px;
+    color: var(--primary-color);
+    margin-left: 95px; /* To account for the image width + margin */
+}
+
+.announcement-text strong {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Card body padding adjustment for announcement */
+.announcement + .card-body {
+    padding: 10px;
+}
+
+/* Scholarship List */
+.scholarship-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.scholarship-list li {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.scholarship-list li:last-child {
+    border-bottom: none;
+}
+
+.scholarship-list a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.scholarship-list a:hover {
+    color: var(--primary-color);
+}
+
+.post-date {
+    color: #666;
+    font-size: 12px;
+}
+
+/* News Items */
+.news-item {
+    margin-bottom: 20px;
+}
+
+.news-content a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.news-content a:hover {
+    color: var(--primary-color);
+}
+
+.news-excerpt {
+    font-size: 12px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.read-more {
+    color: var(--primary-color);
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Notice List */
+.notice-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notice-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.notice-list li:last-child {
+    border-bottom: none;
+}
+
+.notice-list a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.notice-list a:hover {
+    color: var(--primary-color);
+}
+
+.detail-link {
+    color: var(--primary-color);
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* Hotspot Box */
+.hotspot-box {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    font-size: 13px;
+}
+
+.register-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ICT Award */
+.card h6 {
+    color: var(--primary-color);
+    font-size: 14px;
+    margin: 0;
+}
+
+/* More Link */
+.more-link {
+    color: var(--primary-color);
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.more-link:hover {
+    text-decoration: underline;
+}
+
+/* Text Alignment */
+.text-end {
+    text-align: right;
+}
+
+/* Responsive Images */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Three Column News Section */
+.row.mb-4 {
+    margin-bottom: 2rem !important;
+}
+
+.row.mb-4 .card {
+    height: 100%;
+    margin-bottom: 0;
+}
+
+.row.mb-4 .card-body {
+    height: calc(100% - 41px); /* 41px is the header height */
+    display: flex;
+    flex-direction: column;
+}
+
+.scholarship-list {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+.news-content {
+    flex-grow: 1;
+}
+
+/* Adjust spacing for the rest of the content */
+.overview-section {
+    margin-top: 0;
+}
+
+/* Card adjustments */
+.card {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+/* More link positioning */
+.text-end {
+    margin-top: auto;
+    padding-top: 0.5rem;
+} 
