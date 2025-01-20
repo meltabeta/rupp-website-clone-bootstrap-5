@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- Top Navigation -->
-    <div class="top-nav">
+    <div class="top-nav d-none d-lg-block">
         <div class="container">
             <div class="d-flex justify-content-end top-links">
                 <a href="#">HOME</a> <span class="separator">|</span>
@@ -49,17 +49,38 @@
     <!-- Main Navigation -->
     <nav class="main-nav">
         <div class="container">
-            <div class="faculty-nav">
-                <a href="#" class="faculty-item">FACULTY OF SCIENCE</a>
-                <a href="#" class="faculty-item">FACULTY OF SOCIAL SCIENCE AND HUMANITIES</a>
-                <a href="#" class="faculty-item">FACULTY OF ENGINEERING</a>
-                <a href="#" class="faculty-item">FACULTY OF DEVELOPMENT STUDIES</a>
-                <a href="#" class="faculty-item">FACULTY OF EDUCATION</a>
-                <a href="#" class="faculty-item">INSTITUTE OF FOREIGN LANGUAGES</a>
-                <a href="#" class="faculty-item">INSTITUTE FOR INTERNATIONAL STUDIES AND PUBLIC POLICY</a>
-                <a href="#" class="faculty-item">CENTERS</a>
-                <a href="#" class="faculty-item">OFFICES</a>
-                <a href="#" class="faculty-item">CONFERENCES</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse d-lg-block" id="mainNav">
+                <!-- Mobile Top Links -->
+                <div class="top-links-mobile d-lg-none">
+                    <a href="#">HOME</a>
+                    <a href="#">ABOUT</a>
+                    <a href="#">PROJECT</a>
+                    <a href="#">MANAGEMENT</a>
+                    <a href="#">FOUNDATION STUDIES</a>
+                    <a href="#">IRO</a>
+                    <a href="#">GRADUATE PROGRAMS</a>
+                    <a href="#">UMAP</a>
+                    <a href="#">CONTACT</a>
+                    <a href="#">MAIL</a>
+                    <a href="#">E-LIBRARY</a>
+                    <a href="#">JOURNAL</a>
+                </div>
+                <!-- Faculty Navigation -->
+                <div class="faculty-nav">
+                    <a href="#" class="faculty-item">FACULTY OF SCIENCE</a>
+                    <a href="#" class="faculty-item">FACULTY OF SOCIAL SCIENCE AND HUMANITIES</a>
+                    <a href="#" class="faculty-item">FACULTY OF ENGINEERING</a>
+                    <a href="#" class="faculty-item">FACULTY OF DEVELOPMENT STUDIES</a>
+                    <a href="#" class="faculty-item">FACULTY OF EDUCATION</a>
+                    <a href="#" class="faculty-item">INSTITUTE OF FOREIGN LANGUAGES</a>
+                    <a href="#" class="faculty-item">INSTITUTE FOR INTERNATIONAL STUDIES AND PUBLIC POLICY</a>
+                    <a href="#" class="faculty-item">CENTERS</a>
+                    <a href="#" class="faculty-item">OFFICES</a>
+                    <a href="#" class="faculty-item">CONFERENCES</a>
+                </div>
             </div>
         </div>
     </nav>

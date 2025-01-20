@@ -20,12 +20,17 @@ body {
 
 .top-links {
     font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 5px;
 }
 
 .top-links a {
     color: #333;
     text-decoration: none;
     padding: 0 5px;
+    white-space: nowrap;
 }
 
 .top-links a:hover {
@@ -109,29 +114,122 @@ body {
     color: #fff;
 }
 
+.navbar-toggler {
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 8px 15px;
+    margin: 8px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+
+.navbar-toggler::after {
+    content: "Menu";
+    font-size: 14px;
+    color: white;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 1.5em;
+    height: 1.5em;
+}
+
+/* Mobile Navigation */
+.top-links-mobile {
+    display: none;
+    flex-direction: column;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+}
+
+.top-links-mobile a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
+}
+
+.top-links-mobile a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.top-links-mobile a:last-child {
+    border-bottom: none;
+}
+
 /* Responsive Styles */
 @media (max-width: 992px) {
+    .top-links-mobile {
+        display: flex;
+    }
+    
+    .faculty-nav {
+        flex-direction: column;
+    }
+    
     .faculty-item {
-        flex: 0 0 33.333%;
+        flex: 1;
+        border-right: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        min-height: 40px;
+        padding: 8px 15px;
+        justify-content: flex-start;
+        font-size: 13px;
+    }
+    
+    .faculty-item:last-child {
+        border-bottom: none;
+    }
+    
+    #mainNav {
+        background-color: var(--primary-color);
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 100%;
+        z-index: 1000;
+        padding: 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    
+    .main-nav .container {
+        position: relative;
     }
 }
 
 @media (max-width: 768px) {
     .khmer-title {
-        font-size: 24px;
+        font-size: 22px;
     }
     
     .english-title {
-        font-size: 18px;
+        font-size: 16px;
+    }
+    
+    .motto {
+        font-size: 12px;
     }
     
     .faculty-item {
         flex: 0 0 50%;
+        font-size: 10px;
+        min-height: 40px;
+        padding: 8px 6px;
     }
     
     .logo {
-        width: 80px;
+        width: 70px;
+    }
+    
+    .site-header {
+        padding: 10px 0;
     }
 }
 
@@ -141,12 +239,45 @@ body {
     }
     
     .top-links {
-        flex-wrap: wrap;
         justify-content: center;
+        padding: 0 10px;
     }
     
     .top-links a {
-        margin: 2px 0;
+        font-size: 11px;
+        padding: 3px 5px;
+    }
+    
+    .separator {
+        display: none;
+    }
+    
+    .khmer-title {
+        font-size: 20px;
+    }
+    
+    .english-title {
+        font-size: 14px;
+    }
+    
+    .logo {
+        width: 60px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .site-header .row {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .site-header .col-auto {
+        margin-bottom: 10px;
+    }
+    
+    .logo {
+        margin-right: 0;
     }
 }
 
